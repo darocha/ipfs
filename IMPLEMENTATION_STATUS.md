@@ -12,27 +12,27 @@
 
 | Command                                      | Go Impl       | JS Impl       |
 | -------------------------------------------- | :-----------: | :-----------: |
-| **`ipfs ledger`**                            | :green_apple: | :tomato:      |
-|     `peer`                                   | :green_apple: | :tomato:      |
+| **`ipfs ledger`**                            | :green_apple: | :lemon:       |
+|     `peer`                                   | :green_apple: | :lemon:       |
 | **`ipfs reprovide`**                         | :green_apple: | :tomato:      |
 | **`ipfs bitswap stat`**                      | :green_apple: | :green_apple: |
-| **`ipfs bitswap unwant`**                    | :green_apple: | :tomato:      |
-|     `key`                                    | :green_apple: | :tomato:      |
-| **`ipfs bitswap wantlist`**                  | :green_apple: | :lemon:       |
-|     `peer`                                   | :green_apple: | :tomato:      |
+| **`ipfs bitswap unwant`**                    | :green_apple: | :green_apple: |
+|     `key`                                    | :green_apple: | :green_apple: |
+| **`ipfs bitswap wantlist`**                  | :green_apple: | :green_apple: |
+|     `peer`                                   | :green_apple: | :green_apple: |
 
 #### HTTP
 
 | Endpoint                                     | Go Impl       | JS Impl       |
 | -------------------------------------------- | :-----------: | :-----------: |
-| **`GET /api/v0/bitswap/ledger`**             | :green_apple: | :tomato:      |
-|     `arg=`                                   | :green_apple: | :tomato:      |
+| **`GET /api/v0/bitswap/ledger`**             | :green_apple: | :lemon:       |
+|     `arg=`                                   | :green_apple: | :lemon:       |
 | **`GET /api/v0/bitswap/reprovide`**          | :green_apple: | :tomato:      |
 | **`GET /api/v0/bitswap/stat`**               | :green_apple: | :green_apple: |
-| **`GET /api/v0/bitswap/unwant`**             | :green_apple: | :tomato:      |
-|     `arg=`                                   | :green_apple: | :tomato:      |
-| **`GET /api/v0/bitswap/wantlist`**           | :green_apple: | :lemon:       |
-|     `peer=`                                  | :green_apple: | :tomato:      |
+| **`GET /api/v0/bitswap/unwant`**             | :green_apple: | :green_apple: |
+|     `arg=`                                   | :green_apple: | :green_apple: |
+| **`GET /api/v0/bitswap/wantlist`**           | :green_apple: | :green_apple: |
+|     `peer=`                                  | :green_apple: | :green_apple: |
 
 #### Core
 
@@ -228,22 +228,55 @@ See [interface-ipfs-core](https://github.com/ipfs/interface-ipfs-core).
 
 #### CLI
 
+| Command                                      | Go Impl       | JS Impl       |
+| -------------------------------------------- | :-----------: | :-----------: |
+| **`ipfs dht findpeer`**                      | :green_apple: | :tomato:      |
+|     `peer ID`                                | :green_apple: | :tomato:      |
+|     `verbose=`                               | :green_apple: | :tomato:      |
+| **`ipfs dht findprovs`**                     | :green_apple: | :tomato:      |
+|     `key`                                    | :green_apple: | :tomato:      |
+|     `verbose=`                               | :green_apple: | :tomato:      |
+|     `num-providers=`                         | :green_apple: | :tomato:      |
+| **`ipfs dht get`**                           | :green_apple: | :tomato:      |
+|     `key`                                    | :green_apple: | :tomato:      |
+|     `verbose=`                               | :green_apple: | :tomato:      |
+| **`ipfs dht provide`**                       | :green_apple: | :tomato:      |
+|     `key`                                    | :green_apple: | :tomato:      |
+|     `verbose=`                               | :green_apple: | :tomato:      |
+|     `recursive=`                             | :green_apple: | :tomato:      |
+| **`ipfs dht put`**                           | :green_apple: | :tomato:      |
+|     `key`                                    | :green_apple: | :tomato:      |
+|     `value`                                  | :green_apple: | :tomato:      |
+|     `verbose=`                               | :green_apple: | :tomato:      |
+| **`ipfs dht query`**                         | :green_apple: | :tomato:      |
+|     `peer ID`                                | :green_apple: | :tomato:      |
+|     `verbose=`                               | :green_apple: | :tomato:      |
+
 #### HTTP
 
 | Endpoint                                     | Go Impl       | JS Impl       |
 | -------------------------------------------- | :-----------: | :-----------: |
 | **`GET /api/v0/dht/findpeer`**               | :green_apple: | :tomato:      |
 |     `arg=`                                   | :green_apple: | :tomato:      |
-| **`POST /api/v0/dht/findprovs`**             | :green_apple: | :tomato:      |
+|     `verbose=`                               | :green_apple: | :tomato:      |
+| **`GET /api/v0/dht/findprovs`**              | :green_apple: | :tomato:      |
 |     `arg=`                                   | :green_apple: | :tomato:      |
+|     `verbose=`                               | :green_apple: | :tomato:      |
+|     `num-providers=`                         | :green_apple: | :tomato:      |
 | **`GET /api/v0/dht/get`**                    | :green_apple: | :tomato:      |
 |     `arg=`                                   | :green_apple: | :tomato:      |
+|     `verbose=`                               | :green_apple: | :tomato:      |
+| **`GET /api/v0/dht/provide`**                | :green_apple: | :tomato:      |
+|     `arg=`                                   | :green_apple: | :tomato:      |
+|     `verbose=`                               | :green_apple: | :tomato:      |
+|     `recursive=`                             | :green_apple: | :tomato:      |
 | **`GET /api/v0/dht/put`**                    | :green_apple: | :tomato:      |
 |     `arg1=`                                  | :green_apple: | :tomato:      |
 |     `arg2=`                                  | :green_apple: | :tomato:      |
+|     `verbose=`                               | :green_apple: | :tomato:      |
 | **`GET /api/v0/dht/query`**                  | :green_apple: | :tomato:      |
 |     `arg=`                                   | :green_apple: | :tomato:      |
-
+|     `verbose=`                               | :green_apple: | :tomato:      |
 
 #### Core
 
@@ -260,16 +293,16 @@ See [interface-ipfs-core](https://github.com/ipfs/interface-ipfs-core).
 | **`ipfs add`**                               | :green_apple: | :lemon:       |
 |     `file`                                   | :green_apple: | :green_apple: |
 |     `recursive`                              | :green_apple: | :green_apple: |
-|     `quiet`                                  | :green_apple: | :tomato:      |
-|     `quieter`                                | :green_apple: | :tomato:      |
-|     `silent`                                 | :green_apple: | :tomato:      |
-|     `progress`                               | :green_apple: | :tomato:      |
+|     `quiet`                                  | :green_apple: | :green_apple: |
+|     `quieter`                                | :green_apple: | :green_apple: |
+|     `silent`                                 | :green_apple: | :green_apple: |
+|     `progress`                               | :green_apple: | :green_apple: |
 |     `trickle`                                | :green_apple: | :green_apple: |
-|     `only-hash`                              | :green_apple: | :tomato:      |
+|     `only-hash`                              | :green_apple: | :green_apple: |
 |     `wrap-with-directory`                    | :green_apple: | :green_apple: |
 |     `hidden`                                 | :green_apple: | :tomato:      |
 |     `chunker`                                | :green_apple: | :tomato:      |
-|     `pin`                                    | :green_apple: | :tomato:      |
+|     `pin`                                    | :green_apple: | :lemon:       |
 |     `raw-leaves`                             | :green_apple: | :tomato:      |
 |     `nocopy`                                 | :green_apple: | :tomato:      |
 |     `fscache`                                | :green_apple: | :tomato:      |
@@ -337,13 +370,13 @@ See [interface-ipfs-core](https://github.com/ipfs/interface-ipfs-core).
 |     `quiet=`                                 | :green_apple: | :tomato:      |
 |     `quieter=`                               | :green_apple: | :tomato:      |
 |     `silent=`                                | :green_apple: | :tomato:      |
-|     `progress=`                              | :green_apple: | :tomato:      |
+|     `progress=`                              | :green_apple: | :green_apple: |
 |     `trickle=`                               | :green_apple: | :green_apple: |
-|     `only-hash=`                             | :green_apple: | :tomato:      |
+|     `only-hash=`                             | :green_apple: | :green_apple: |
 |     `wrap-with-directory`                    | :green_apple: | :green_apple: |
 |     `hidden`                                 | :green_apple: | :tomato:      |
 |     `chunker`                                | :green_apple: | :tomato:      |
-|     `pin`                                    | :green_apple: | :tomato:      |
+|     `pin`                                    | :green_apple: | :lemon:       |
 |     `raw-leaves`                             | :green_apple: | :tomato:      |
 |     `nocopy`                                 | :green_apple: | :tomato:      |
 |     `fscache`                                | :green_apple: | :tomato:      |
@@ -433,11 +466,41 @@ See [interface-ipfs-core](https://github.com/ipfs/interface-ipfs-core).
 
 ## Key Management
 
-> **Note:** Implementation in js-ipfs is not planned for now.
-
 #### CLI
 
+| Command                                      | Go Impl       | JS Impl        |
+| -------------------------------------------- | :-----------: | :-----------:  |
+| **`ipfs key gen`**                           | :green_apple: | :chestnut:     |
+|     `name`                                   | :green_apple: | :chestnut:     |
+|     `type=`                                  | :green_apple: | :chestnut:     |
+|     `size=`                                  | :green_apple: | :chestnut:     |
+| **`ipfs key list`**                          | :green_apple: | :chestnut:     |
+|     `l=`                                     | :green_apple: | :chestnut:     |
+| **`ipfs key rename`**                        | :green_apple: | :chestnut:     |
+|     `name`                                   | :green_apple: | :chestnut:     |
+|     `newName`                                | :green_apple: | :chestnut:     |
+|     `force=`                                 | :green_apple: | :chestnut:     |
+| **`ipfs key rm`**                            | :green_apple: | :chestnut:     |
+|     `name`                                   | :green_apple: | :chestnut:     |
+|     `l=`                                     | :green_apple: | :chestnut:     |
+
 #### HTTP
+
+| Endpoint                                     | Go Impl       | JS Impl        |
+| -------------------------------------------- | :-----------: | :-----------:  |
+| **`GET /api/v0/key/gen`**                    | :green_apple: | :chestnut:     |
+|     `arg=`                                   | :green_apple: | :chestnut:     |
+|     `type=`                                  | :green_apple: | :chestnut:     |
+|     `size=`                                  | :green_apple: | :chestnut:     |
+| **`GET /api/v0/key/list`**                   | :green_apple: | :chestnut:     |
+|     `l=`                                     | :green_apple: | :chestnut:     |
+| **`GET /api/v0/key/rename`**                 | :green_apple: | :chestnut:     |
+|     `arg=`                                   | :green_apple: | :chestnut:     |
+|     `arg=`                                   | :green_apple: | :chestnut:     |
+|     `force=`                                 | :green_apple: | :chestnut:     |
+| **`GET /api/v0/key/rm`**                     | :green_apple: | :chestnut:     |
+|     `arg=`                                   | :green_apple: | :chestnut:     |
+|     `l=`                                     | :green_apple: | :chestnut:     |
 
 #### Core
 
@@ -463,10 +526,10 @@ See [interface-ipfs-core](https://github.com/ipfs/interface-ipfs-core).
 |     `pver`                                   | :green_apple: | :tomato:      |
 |     `pubkey`                                 | :green_apple: | :tomato:      |
 |     `addrs`                                  | :green_apple: | :tomato:      |
-| **`ipfs mount`**                             | :green_apple: | :chesnut:     |
-|     `ipfs-path=`                             | :green_apple: | :chesnut:     |
-|     `ipns-path=`                             | :green_apple: | :chesnut:     |
-| **`ipfs mount`**                             | :green_apple: | :chesnut:     |
+| **`ipfs mount`**                             | :green_apple: | :chestnut:    |
+|     `ipfs-path=`                             | :green_apple: | :chestnut:    |
+|     `ipns-path=`                             | :green_apple: | :chestnut:    |
+| **`ipfs mount`**                             | :green_apple: | :chestnut:    |
 
 #### HTTP
 
@@ -480,10 +543,10 @@ See [interface-ipfs-core](https://github.com/ipfs/interface-ipfs-core).
 | **`GET /api/v0/commands`**                   | :green_apple: | :green_apple: |
 | **`POST /api/v0/id`**                        | :green_apple: | :green_apple: |
 |     `arg=`                                   | :green_apple: | :green_apple: |
-| **`GET /api/v0/mount`**                      | :green_apple: | :chesnut:     |
-|     `ipfs-path=`                             | :green_apple: | :chesnut:     |
-|     `ipns-path=`                             | :green_apple: | :chesnut:     |
-| **`GET /api/v0/mount`**                      | :green_apple: | :chesnut:     |
+| **`GET /api/v0/mount`**                      | :green_apple: | :chestnut:    |
+|     `ipfs-path=`                             | :green_apple: | :chestnut:    |
+|     `ipns-path=`                             | :green_apple: | :chestnut:    |
+| **`GET /api/v0/mount`**                      | :green_apple: | :chestnut:    |
 
 #### Core
 
@@ -497,6 +560,25 @@ See [interface-ipfs-core](https://github.com/ipfs/interface-ipfs-core).
 
 #### CLI
 
+| Command                                      | Go Impl       | JS Impl       |
+| -------------------------------------------- | :-----------: | :-----------: |
+| **`ipfs name publish`**                      | :green_apple: | :tomato:      |
+|     `ipfs-path`                              | :green_apple: | :tomato:      |
+|     `resolve=`                               | :green_apple: | :tomato:      |
+|     `lifetime=`                              | :green_apple: | :tomato:      |
+|     `ttl=`                                   | :green_apple: | :tomato:      |
+|     `key=`                                   | :green_apple: | :tomato:      |
+| **`ipfs name resolve`**                      | :green_apple: | :tomato:      |
+|     `name`                                   | :green_apple: | :tomato:      |
+|     `recursive=`                             | :green_apple: | :tomato:      |
+|     `nocache=`                               | :green_apple: | :tomato:      |
+| **`ipfs resolve`**                           | :green_apple: | :tomato:      |
+|     `name`                                   | :green_apple: | :tomato:      |
+|     `recursive=`                             | :green_apple: | :tomato:      |
+| **`ipfs dns`**                               | :green_apple: | :tomato:      |
+|     `domain`                                 | :green_apple: | :tomato:      |
+|     `recursive=`                             | :green_apple: | :tomato:      |
+
 #### HTTP
 
 | Endpoint                                     | Go Impl       | JS Impl       |
@@ -506,6 +588,7 @@ See [interface-ipfs-core](https://github.com/ipfs/interface-ipfs-core).
 |     `resolve=`                               | :green_apple: | :tomato:      |
 |     `lifetime=`                              | :green_apple: | :tomato:      |
 |     `ttl=`                                   | :green_apple: | :tomato:      |
+|     `key=`                                   | :green_apple: | :tomato:      |
 | **`GET /api/v0/name/resolve`**               | :green_apple: | :tomato:      |
 |     `arg=`                                   | :green_apple: | :tomato:      |
 |     `recursive=`                             | :green_apple: | :tomato:      |
@@ -627,45 +710,38 @@ See [interface-ipfs-core](https://github.com/ipfs/interface-ipfs-core).
 
 | Command                                      | Go Impl       | JS Impl       |
 | -------------------------------------------- | :-----------: | :-----------: |
-| **`ipfs pin add`**                           | :green_apple: | :tomato:      |
-|     `arg=`                                   | :green_apple: | :tomato:      |
-|     `recursive=`                             | :green_apple: | :tomato:      |
-| **`ipfs pin ls`**                            | :green_apple: | :tomato:      |
-|     `type=`                                  | :green_apple: | :tomato:      |
-|     `count=`                                 | :green_apple: | :tomato:      |
-|     `quiet=`                                 | :green_apple: | :tomato:      |
-| **`ipfs pin rm`**                            | :green_apple: | :tomato:      |
-|     `arg=`                                   | :green_apple: | :tomato:      |
-|     `recursive=`                             | :green_apple: | :tomato:      |
+| **`ipfs pin add`**                           | :green_apple: | :lemon:       |
+|     `hash`                                   | :green_apple: | :lemon:       |
+|     `recursive`                              | :green_apple: | :lemon:       |
+|     `progress`                               | :green_apple: | :tomato:      |
+| **`ipfs pin ls`**                            | :green_apple: | :lemon:       |
+|     `type`                                   | :green_apple: | :lemon:       |
+|     `quiet`                                  | :green_apple: | :lemon:       |
+| **`ipfs pin rm`**                            | :green_apple: | :lemon:       |
+|     `hash`                                   | :green_apple: | :lemon:       |
+|     `recursive`                              | :green_apple: | :lemon:       |
 | **`ipfs pin update`**                        | :green_apple: | :tomato:      |
-|     `arg=`                                   | :green_apple: | :tomato:      |
-|     `unpin=`                                 | :green_apple: | :tomato:      |
+|     `hash`                                   | :green_apple: | :tomato:      |
+|     `unpin`                                  | :green_apple: | :tomato:      |
 | **`ipfs pin verify`**                        | :green_apple: | :tomato:      |
-|     `verbose=`                               | :green_apple: | :tomato:      |
+|     `verbose`                                | :green_apple: | :tomato:      |
 | **`ipfs refs`**                              | :green_apple: | :tomato:      |
-|     `arg=`                                   | :green_apple: | :tomato:      |
-|     `format=`                                | :green_apple: | :tomato:      |
-|     `edges=`                                 | :green_apple: | :tomato:      |
-|     `unique=`                                | :green_apple: | :tomato:      |
-|     `recursive=`                             | :green_apple: | :tomato:      |
+|     `hash`                                   | :green_apple: | :tomato:      |
+|     `format`                                 | :green_apple: | :tomato:      |
+|     `edges`                                  | :green_apple: | :tomato:      |
+|     `unique`                                 | :green_apple: | :tomato:      |
+|     `recursive`                              | :green_apple: | :tomato:      |
 | **`ipfs refs local`**                        | :green_apple: | :tomato:      |
-| **`ipfs refs`**                              | :green_apple: | :tomato:      |
-|     `arg=`                                   | :green_apple: | :tomato:      |
-|     `format=`                                | :green_apple: | :tomato:      |
-|     `edges=`                                 | :green_apple: | :tomato:      |
-|     `unique=`                                | :green_apple: | :tomato:      |
-|     `recursive=`                             | :green_apple: | :tomato:      |
 
 #### HTTP
 
 | Endpoint                                     | Go Impl       | JS Impl       |
 | -------------------------------------------- | :-----------: | :-----------: |
-| **`GET /api/v0/pin/add`**                    | :green_apple: | :tomato:      |
-|     `arg=`                                   | :green_apple: | :tomato:      |
-|     `recursive=`                             | :green_apple: | :tomato:      |
-| **`POST /api/v0/pin/ls`**                    | :green_apple: | :tomato:      |
+| **`GET /api/v0/pin/add`**                    | :green_apple: | :lemon:       |
+|     `arg=`                                   | :green_apple: | :lemon:       |
+|     `recursive=`                             | :green_apple: | :lemon:       |
+| **`POST /api/v0/pin/ls`**                    | :green_apple: | :lemon:       |
 |     `type=`                                  | :green_apple: | :tomato:      |
-|     `count=`                                 | :green_apple: | :tomato:      |
 |     `quiet=`                                 | :green_apple: | :tomato:      |
 | **`GET /api/v0/pin/rm`**                     | :green_apple: | :tomato:      |
 |     `arg=`                                   | :green_apple: | :tomato:      |
@@ -682,12 +758,6 @@ See [interface-ipfs-core](https://github.com/ipfs/interface-ipfs-core).
 |     `unique=`                                | :green_apple: | :tomato:      |
 |     `recursive=`                             | :green_apple: | :tomato:      |
 | **`GET /api/v0//refs/local`**                | :green_apple: | :tomato:      |
-| **`GET /api/v0/refs`**                       | :green_apple: | :tomato:      |
-|     `arg=`                                   | :green_apple: | :tomato:      |
-|     `format=`                                | :green_apple: | :tomato:      |
-|     `edges=`                                 | :green_apple: | :tomato:      |
-|     `unique=`                                | :green_apple: | :tomato:      |
-|     `recursive=`                             | :green_apple: | :tomato:      |
 
 #### Core
 
@@ -699,7 +769,31 @@ See [interface-ipfs-core](https://github.com/ipfs/interface-ipfs-core).
 
 #### CLI
 
+| Command                                      | Go Impl       | JS Impl       |
+| -------------------------------------------- | :-----------: | :-----------: |
+| **`ipfs pubsub ls`**                         | :green_apple: | :green_apple: |
+| **`ipfs pubsub peers`**                      | :green_apple: | :green_apple: |
+|     `topic`                                  | :green_apple: | :green_apple: |
+| **`ipfs pubsub pub`**                        | :green_apple: | :green_apple: |
+|     `topic`                                  | :green_apple: | :green_apple: |
+|     `data`                                   | :green_apple: | :green_apple: |
+| **`ipfs pubsub sub`**                        | :green_apple: | :green_apple: |
+|     `topic`                                  | :green_apple: | :green_apple: |
+|     `discover`                               | :green_apple: | :tomato:      |
+
 #### HTTP
+
+| Endpoint                                     | Go Impl       | JS Impl       |
+| -------------------------------------------- | :-----------: | :-----------: |
+| **`GET /api/v0/pubsub/ls`**                  | :green_apple: | :green_apple: |
+| **`GET /api/v0/pubsub/peers`**               | :green_apple: | :green_apple: |
+|     `arg=`                                   | :green_apple: | :green_apple: |
+| **`GET /api/v0/pubsub/pub`**                 | :green_apple: | :green_apple: |
+|     `arg=`                                   | :green_apple: | :green_apple: |
+|     `arg=`                                   | :green_apple: | :green_apple: |
+| **`GET /api/v0/pubsub/sub`**                 | :green_apple: | :green_apple: |
+|     `arg=`                                   | :green_apple: | :green_apple: |
+|     `discover=`                              | :green_apple: | :green_apple: |
 
 #### Core
 

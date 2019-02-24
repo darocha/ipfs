@@ -1,4 +1,4 @@
-# Roadmap to IPFS 1.0.0 
+# IPFS Project Requirements to 1.0.0
 
 ## Table of Contents
 
@@ -12,7 +12,7 @@ In order for IPFS to reach its maturity state, going from Alpha, to Beta and to 
 - For its specifications to be 100% complete. This includes the IPFS, libp2p, multiformats and IPLD specs.
 - Compliance tests for the specification.
 - The golang and JavaScript implementations to be 100% complete and spec compliant.
-- A third party implementation of IPFS, fully interopable with the go and JavaScript versions.
+- A third party implementation of IPFS, fully interoperable with the go and JavaScript versions.
 - A release plan and cycle, including a strategy to support specific key releases for longer periods of time (i.e LTS releases vs stable)
 
 ## Milestones
@@ -51,7 +51,7 @@ These are some use case milestones to drive development.
   - [x] js-ipfs-api client inside a tab
   - [x] js-ipfs full node inside a tab
   - [x] browser extension gateway redirects
-  - [ ] browser extension full node
+  - [x] browser extension full node
   - [ ] impl native inside browsers
 - [x] Support for versioning and archival
   - [x] archival of files
@@ -117,7 +117,7 @@ These are some libraries that must exist to make developers' lives easy. It is c
   - [ ] ipfs api bindings in Erlang
 - [x] full ipfs node implementations
   - [x] go-ipfs - implementation in Go
-  - [ ] js-ipfs - implementation in JS
+  - [x] js-ipfs - implementation in JS
 - [x] developer libs for cli tools
 - [ ] developer libs for desktop apps
 - [x] developer libs for webapps
@@ -248,108 +248,7 @@ The multiformats are a set of self-describing protocols/formats for future-proof
 
 The libp2p protocols are the protocol stack for the modular p2p protocols library spun out of IPFS. These form a p2p-first network stack, with no assumptions, self description, and modular interfaces. More at https://github.com/ipfs/specs/tree/master/libp2p
 
-- [x] libp2p architecture
-  - [x] libp2p impl in Go
-  - [x] libp2p impl in JS
-- [x] Identify Protocol interfaces
-  - [x] Identify: impl in Go
-  - [x] Identify: impl in JS
-- [x] Transport Protocol interfaces
-  - [x] Transport protocol: TCP in Go
-  - [x] Transport protocol: TCP in JS node
-  - [x] Transport protocol: UTP in Go
-  - [x] Transport protocol: UTP in JS node
-  - [x] Transport protocol: UDT in Go
-  - [ ] Transport protocol: UDT in JS node
-  - [x] Transport protocol: WebSockets in Go
-  - [x] Transport protocol: WebSockets in JS node
-  - [x] Transport protocol: WebSockets in JS browser
-  - [ ] Transport protocol: WebRTC in Go
-  - [x] Transport protocol: WebRTC in JS node
-  - [x] Transport protocol: WebRTC in JS browser
-  - [ ] Transport protocol: SCTP in Go
-  - [ ] Transport protocol: SCTP in JS node
-  - [ ] Transport protocol: tor in Go
-  - [ ] Transport protocol: tor in JS node
-  - [ ] Transport protocol: i2p in Go
-  - [ ] Transport protocol: i2p in JS node
-  - [ ] Transport protocol: cjdns in Go
-  - [ ] Transport protocol: cjdns in JS node
-  - [ ] Transport protocol: Bluetooth LE in Go
-  - [ ] Transport protocol: Bluetooth LE in JS node
-  - [ ] Transport protocol: Audio TP in Go
-  - [ ] Transport protocol: Audio TP in JS node
-  - [ ] Transport protocol: Zerotier in Go
-  - [ ] Transport protocol: Zerotier in JS node
-  - [ ] Transport protocol: QUIC in Go
-  - [ ] Transport protocol: QUIC in JS node
-- [x] Stream Muxer: interfaces
-  - [x] Stream Muxer: benchmarks in Go
-  - [x] Stream Muxer: benchmarks in JS
-  - [x] Stream Muxer: muxado in Go
-  - [x] Stream Muxer: spdystream in Go
-  - [x] Stream Muxer: multiplex in Go
-  - [x] Stream Muxer: multiplex in JS
-  - [x] Stream Muxer: spdy in JS
-  - [ ] Stream Muxer: http2 in Go
-  - [ ] Stream Muxer: http2 in JS
-  - [ ] Stream Muxer: QUIC in Go
-  - [ ] Stream Muxer: QUIC in JS
-- [x] Swarm / Switch: interfaces
-  - [x] Dialer stack in Go
-  - [x] Dialer stack in JS
-  - [x] Swarm implementation in Go
-  - [x] Swarm implementation in JS
-- [x] NAT Traversal: interfaces
-  - [x] nat-pmp implementation in Go
-  - [ ] nat-pmp implementation in JS
-  - [x] upnp implementation in Go
-  - [ ] upnp implementation in JS
-  - [x] ext addr discovery in Go
-  - [ ] ext addr discovery in JS
-  - [ ] STUN-like implementation in Go
-  - [ ] STUN-like implementation in JS
-  - [x] line-switch relay implementation in Go
-  - [ ] line-switch relay implementation in JS
-  - [ ] pkt-switch relay implementation in Go
-  - [ ] pkt-switch relay implementation in JS
-- [x] Peer Discovery: interfaces
-  - [x] Peer Discovery: mDNS in Go
-  - [x] Peer Discovery: mDNS in JS
-  - [x] Peer Discovery: bootstrap list in JS
-  - [x] Peer Discovery: bootstrap list in Go
-  - [x] Peer Discovery: DHT query in JS
-  - [x] Peer Discovery: DHT query in Go
-  - [ ] Peer Discovery: PEX in JS
-  - [ ] Peer Discovery: PEX in Go
-  - [ ] Peer Discovery: DNS in JS
-  - [ ] Peer Discovery: DNS in Go
-- [x] Content Routing: protocol interfaces
-  - [x] Content Routing: Kademlia DHT impl in Go
-  - [x] Content Routing: Kademlia DHT impl in JS
-  - [ ] Content Routing: pub/sub impl in Go
-  - [ ] Content Routing: pub/sub impl in JS
-  - [ ] Content Routing: PHT in Go
-  - [ ] Content Routing: PHT in JS
-- [x] Peer Routing: protocol interfaces
-  - [x] Peer Routing: Kademlia DHT impl in Go
-  - [x] Peer Routing: Kademlia DHT impl in JS
-  - [ ] Peer Routing: pub/sub impl in Go
-  - [ ] Peer Routing: pub/sub impl in JS
-  - [ ] Peer Routing: PHT in Go
-  - [ ] Peer Routing: PHT in JS
-- [x] Exchange: protocol interfaces
-  - [x] Exchange: HTTP in Go
-  - [x] Exchange: HTTP in JS
-  - [x] Exchange: Bitswap in Go
-  - [x] Exchange: Bitswap in JS
-  - [x] Exchange: Bittorrent in Go
-  - [x] Exchnage: Bittorrent in JS
-- [ ] Consensus: protocol interfaces
-  - [ ] Consensus: Paxos
-  - [ ] Consensus: Raft
-  - [ ] Consensus: PBFT
-  - [ ] Consensus: Nakamoto
+Consult [libp2p Requirements here](https://github.com/libp2p/libp2p/blob/master/REQUIREMENTS.md)
 
 ### Bitswap
 
@@ -438,7 +337,7 @@ The IPFS pub/sub service will provide fast delivery and routing for subnets of i
 - [ ] IPFS pub/sub: Protocol and architecture design
   - [ ] IPFS pub/sub: protocol spec / messages
   - [ ] IPFS pub/sub: record spec
-  - [ ] IPFS pub/sub: one-hop support
+  - [x] IPFS pub/sub: one-hop support
   - [ ] IPFS pub/sub: multihop tree forming
   - [ ] IPFS pub/sub: churn resistance
   - [ ] IPFS pub/sub: censor resistance
@@ -450,6 +349,7 @@ The IPFS pub/sub service will provide fast delivery and routing for subnets of i
 - [ ] IPFS pub/sub: impl in Go
   - [x] IPFS pub/sub: prototyping in Go
 - [ ] IPFS pub/sub: impl in JS
+  - [x] IPFS pub/sub: prototyping in JS
 - [ ] IPFS pub/sub: pssim simulations
   - [ ] IPFS pub/sub: pssim programmable config
   - [ ] IPFS pub/sub: pssim in-proc tests
@@ -519,14 +419,14 @@ IPLD data structures and importers are various data structures and programs that
     - [x] unixfs file sharding
     - [x] unixfs file trickledag
     - [x] unixfs dir
-    - [ ] unixfs dir sharding
+    - [x] unixfs dir sharding
     - [x] unixfs metadata
   - [x] unixfs impl in JS
     - [x] unixfs file
     - [x] unixfs file sharding
-    - [ ] unixfs file trickledag
+    - [x] unixfs file trickledag
     - [x] unixfs dir
-    - [ ] unixfs dir sharding
+    - [x] unixfs dir sharding
     - [x] unixfs metadata
 - [x] archives spec
   - [x] tar
@@ -674,16 +574,16 @@ The go-ipfs effort is the Go implementation of IPFS. It is meant to run as a com
 
 The js-ipfs effort is the javascript implementation of IPFS. It is meant to run on both node.js and today's regular web browsers. It is close, but not yet ready. More at https://github.com/ipfs/js-ipfs
 
-- [ ] js-ipfs ipfs node components
+- [x] js-ipfs ipfs node components
   - [x] js-ipfs multi protocols
   - [x] js-ipfs component: repo
   - [x] js-ipfs component: networking (libp2p)
   - [x] js-ipfs component: bitswap
   - [x] js-ipfs component: dag / ipld
-  - [ ] js-ipfs component: pinning
+  - [x] js-ipfs component: pinning
   - [x] js-ipfs component: block api
   - [x] js-ipfs component: object api
-  - [ ] js-ipfs component: files api
+  - [x] js-ipfs component: files api
   - [x] js-ipfs component: daemon
   - [x] js-ipfs component: data importing
   - [x] js-ipfs component: http api
@@ -696,13 +596,13 @@ The js-ipfs effort is the javascript implementation of IPFS. It is meant to run 
     - [x] js-ipfs core api: object
     - [ ] js-ipfs core api: refs
     - [x] js-ipfs core api: repo
-    - [ ] js-ipfs core api: pin
+    - [x] js-ipfs core api: pin
     - [ ] js-ipfs core api: log
   - [ ] js-ipfs ext api impl
     - [ ] js-ipfs ext api: name (ipns)
     - [ ] js-ipfs ext api: dns
     - [ ] js-ipfs ext api: tar
-    - [ ] js-ipfs ext api: files
+    - [x] js-ipfs ext api: files
     - [ ] js-ipfs ext api: stat
     - [ ] js-ipfs ext api: mount
     - [x] js-ipfs ext api: bootstrap
@@ -713,15 +613,14 @@ The js-ipfs effort is the javascript implementation of IPFS. It is meant to run 
     - [ ] js-ipfs tool api: update
     - [x] js-ipfs tool api: commands
   - [ ] js-ipfs net api impl
-    - [ ] js-ipfs net api: ping
+    - [x] js-ipfs net api: ping
     - [ ] js-ipfs net api: dht
-    - [ ] js-ipfs net api: swarm
-    - [ ] go-ipfs net api: records
-- [ ] js-ipfs cli api impl
-  - [ ] js-ipfs cli codecs
-- [ ] js-ipfs http api impl
-  - [ ] js-ipfs http api: streaming
-  - [ ] js-ipfs http api: multipart
+    - [x] js-ipfs net api: swarm
+    - [ ] js-ipfs net api: records
+- [x] js-ipfs cli api impl
+- [x] js-ipfs http api impl
+  - [x] js-ipfs http api: streaming
+  - [x] js-ipfs http api: multipart
 
 ### IPFS directly on the Browsers
 
@@ -738,18 +637,18 @@ We have finished step (1). We are currently working on steps (2) and (3). Step (
   - [x] go-ipfs implementation
   - [x] js-ipfs-api client library
   - [x] use background go-ipfs node (localhost or elsewhere)
-- [ ] IPFS protocol running in a browser tab, in js
+- [x] IPFS protocol running in a browser tab, in js
   - [x] js-libp2p implementation
-  - [ ] js-ipfs implementation
+  - [x] js-ipfs implementation
   - [x] libp2p.js browser library
-  - [ ] ipfs.js browser library
+  - [x] ipfs.js browser library
 - [x] IPFS running with a browser extension
   - [x] go-ipfs implementation
-  - [ ] js-ipfs implementation
+  - [x] js-ipfs implementation
   - [x] firefox extension
     - [x] use background go-ipfs node
     - [ ] easy install of go-ipfs node
-    - [ ] bundling of js-ipfs node
+    - [x] bundling of js-ipfs node
     - [x] url rewriting
     - [x] node management
     - [x] api configuration
@@ -758,16 +657,16 @@ We have finished step (1). We are currently working on steps (2) and (3). Step (
   - [x] chrome extension
     - [x] use background go-ipfs node
     - [ ] easy install of go-ipfs node
-    - [ ] bundling of js-ipfs node
+    - [x] bundling of js-ipfs node
     - [x] url rewriting
     - [ ] node management
     - [ ] api configuration
     - [ ] simple UX for users
-    - [ ] expose ipfs and p2p in the browser window
+    - [x] expose ipfs and p2p in the browser window
 - [ ] IPFS running natively in a browser
   - [x] go-ipfs implementation (for chrome or firefox)
     - [ ] go-ipfs static lib (for chrome or firefox)
-  - [ ] js-ipfs implementation (for chrome or firefox)
+  - [x] js-ipfs implementation (for chrome or firefox)
   - [ ] rust-ipfs implementation (for servo)
   - [ ] chromium patches adding IPFS support
   - [ ] firefox patches adding IPFS support
@@ -796,10 +695,10 @@ We have an ipfs node "management console" GUI, delivered as a distributed webapp
     - [x] adding files (+ drag and drop)
   - [x] tail logs (json)
   - [x] view & edit config (json)
-- [ ] webui console v1
+- [x] webui console v1
   - [x] webapp redesign
   - [x] peer map (flat and 3D)
-  - [ ] new dag explorer
+  - [x] new dag explorer
   - [x] new file explorer
     - [x] file navigation
     - [x] drag and drop support

@@ -21,7 +21,7 @@ Welcome to IPFS! Why not [watch a video demo](https://www.youtube.com/watch?v=8C
 - [Project and Community](#project-and-community)
 - [Project Links](#project-links)
   - [Protocol Implementations](#protocol-implementations)
-  - [API Client Libraries](#api-client-libraries)
+  - [HTTP Client Libraries](#http-client-libraries)
   - [Project Directory](#project-directory)
   - [Other Community Resources](#other-community-resources)
 - [License](#license)
@@ -106,6 +106,7 @@ This is a short selection of introductory talks. In time we will collect more he
 - 2016-09-14 - [Distributed Apps with IPFS](https://www.youtube.com/watch?v=jONZtXMu03w)
 - 2016-10-22 - [The Decentralized Web, IPFS and Filecoin](https://www.youtube.com/watch?v=cU-n_m-snxQ)
 
+See full list at [IPFS Media](https://ipfs.io/media/)
 
 ## More About IPFS
 
@@ -140,19 +141,19 @@ If the issue is a protocol weakness that cannot be immediately exploited or some
 
 ## Project and Community
 
-[![](https://cdn.rawgit.com/jbenet/contribute-ipfs-gif/master/img/contribute.gif)](https://github.com/ipfs/community/blob/master/contributing.md)
+[![](https://cdn.rawgit.com/jbenet/contribute-ipfs-gif/master/img/contribute.gif)](https://github.com/ipfs/community/blob/master/CONTRIBUTING.md)
 
 The IPFS Project is now very large, with hundreds of contributors in our community. You are invited to join it! Here are some links to our communication channels:
 
 - [IPFS Community Forums for Discussion and Support](https://discuss.ipfs.io)
 - [Sprints and Project Management](https://github.com/ipfs/pm)
-- [Contributing Guidelines](https://github.com/ipfs/community/blob/master/contributing.md)
+- [Contributing Guidelines](https://github.com/ipfs/community/blob/master/CONTRIBUTING.md)
 
 You can also find our community on:
 
-- IRC: [#ipfs on chat.freenode.net](https://chat.ipfs.io) for live help and some dev discussions ([Logs](https://botbot.me/freenode/ipfs/))
+- IRC: [#ipfs on chat.freenode.net](https://webchat.freenode.net/?channels=ipfs) for live help and some dev discussions ([Logs](https://botbot.me/freenode/ipfs/))
 - Google Group: [ipfs-users@groups.google.com](https://groups.google.com/forum/#!forum/ipfs-users) (low traffic)
-- Twitter: [@IPFSbot](https://twitter.com/ipfsbot) for some news.
+- Twitter: [@IPFSbot](https://twitter.com/ipfsbot) for news.
 
 ## Project Links
 
@@ -165,40 +166,45 @@ For a community-curated lists of awesome projects using IPFS, check out [awesome
 | Language | Project | Completeness |
 |----------|---------|--------------|
 | Go | https://github.com/ipfs/go-ipfs | **reference** |
-| JavaScript | https://github.com/ipfs/js-ipfs | incomplete |
+| JavaScript | https://github.com/ipfs/js-ipfs | **alpha** |
 | Python | https://github.com/ipfs/py-ipfs | starting |
 | C | https://github.com/Agorise/c-ipfs | starting |
 
 If you would you like to start your own language implementation of IPFS, check out the [IPFS Implementation Guide](https://github.com/ipfs/specs/blob/master/overviews/implement-ipfs.md), and the [Specifications](https://github.com/ipfs/specs). The specs are still evolving, but the core formats are stable and can be built on. Make sure to post an issue if you would like to start an effort, as many people have expressed interest in contributing to new implementations.
 
-### API Client Libraries
+### HTTP Client Libraries
 
-| Language    | Client Library | Completeness |
-|-------------|----------------|--------------|
-| Go          | https://github.com/ipfs/go-ipfs-api               | |
-| Java        | https://github.com/ipfs/java-ipfs-api             | |
-| JavaScript  | https://github.com/ipfs/js-ipfs-api               | |
-| Python      | https://github.com/ipfs/py-ipfs-api               | |
-| Scala       | https://github.com/ipfs/scala-ipfs-api            | |
-| Haskell     | https://github.com/davidar/hs-ipfs-api            | |
-| Swift       | https://github.com/ipfs/swift-ipfs-api            | |
-| CommonLisp  | https://github.com/WeMeetAgain/cl-ipfs-api        | |
-| Rust        | https://github.com/gkbrk/rust-ipfs-api            | |
-|             | https://github.com/rmnoff/rust-ipfs-api           | |
-|             | https://github.com/rschulman/rust-ipfs-api        | |
-| Ruby        | https://github.com/Fryie/ipfs-ruby                | |
-| Swift       | https://github.com/NeoTeo/ipfs-osx-service        | |
-| PHP         | https://github.com/cloutier/php-ipfs-api          | |
-|             | https://github.com/digitalkaoz/php-ipfs-api       | |
-| C#          | https://github.com/TrekDev/net-ipfs-api           | |
-|             | https://github.com/richardschneider/net-ipfs-api  | |
-| C++         | https://github.com/vasild/cpp-ipfs-api            | |
-| Julia       | contact: [@rened](https://github.com/rened)       | 0% |
-| Lua         | contact: [@seclorum](https://github.com/seclorum) | 0% |
-| Erlang      | https://github.com/hendry19901990/erlang-ipfs-api |  |
-| Objective C | !                                                 | 0% |
+<a href="ipfs.io"><img width="360px" src="https://ipfs.io/ipfs/QmQJ68PFMDdAsgCZvA1UVzzn18asVcf7HVvCDgpjiSCAse" alt="IPFS http client lib logo" /></a>
 
-Please help by contributing to one of the above client libraries. If you would like to create another, please see the [IPFS API Client Implementation Guide](https://github.com/ipfs/go-ipfs/blob/master/docs/implement-api-bindings.md), and [tell us](https://github.com/ipfs/ipfs/issues/83) so we can help!
+| Language      | Client Library                                            | Completeness |
+|---------------|-----------------------------------------------------------|--------------|
+| Go            | https://github.com/ipfs/go-ipfs-api                       | ?? |
+| Java          | https://github.com/ipfs/java-ipfs-api                     | ?? |
+| JavaScript    | https://github.com/ipfs/js-ipfs-api                       | 100% |
+| Python        | https://github.com/ipfs/py-ipfs-api                       | ?? |
+| Scala         | https://github.com/ipfs/scala-ipfs-api                    | ?? |
+| Clojure       | https://github.com/keorn/clj-ipfs-api                     | ?? |
+| Clojurescript | https://github.com/district0x/cljs-ipfs-api               | ?? |
+| Haskell       | https://github.com/davidar/hs-ipfs-api                    | ?? |
+| Swift         | https://github.com/ipfs/swift-ipfs-api                    | ?? |
+| CommonLisp    | https://github.com/WeMeetAgain/cl-ipfs-api                | ?? |
+| Rust          | https://github.com/ferristseng/rust-ipfs-api              | ?? |
+|               | https://github.com/gkbrk/rust-ipfs-api                    | ?? |
+|               | https://github.com/rmnoff/rust-ipfs-api                   | ?? |
+|               | https://github.com/rschulman/rust-ipfs-api                | ?? |
+| Ruby          | https://github.com/Fryie/ipfs-ruby                        | ?? |
+| Mac Automator | https://github.com/NeoTeo/ipfs-osx-service                | ?? |
+| PHP           | https://github.com/cloutier/php-ipfs-api                  | ?? |
+|               | https://github.com/digitalkaoz/php-ipfs-api               | ?? |
+| C#            | https://github.com/jeremy-ellis-tech/net-ipfs-http-client | ?? |
+|               | https://github.com/richardschneider/net-ipfs-api          | ?? |
+| C++           | https://github.com/vasild/cpp-ipfs-api                    | ?? |
+| Erlang        | https://github.com/hendry19901990/erlang-ipfs-http-client | ?? |
+| Objective C   | None yet                                                  | ?? |
+| Julia         | contact: [@rened](https://github.com/rened)               | ?? |
+| Lua           | contact: [@seclorum](https://github.com/seclorum)         | ?? |
+
+Please help by contributing to one of the above client libraries. If you would like to create another, please see the [IPFS HTTP Client Implementation Guide](https://github.com/ipfs/go-ipfs/blob/master/docs/implement-api-bindings.md), and [tell us](https://github.com/ipfs/ipfs/issues/83) so we can help!
 
 ### Project Directory
 
@@ -210,34 +216,29 @@ We have a status board that checks all IPFS repositories for CI, Readmes, test c
 
 - [ipfs](https://github.com/ipfs/ipfs) - Master repo, intro, and news.
 - [discourse](https://discuss.ipfs.io) - Community discussions and support forum.
-- [pm](https://github.com/ipfs/pm) - Community Sprints and Project Management.
+- [tm](https://github.com/ipfs/tm) - IPFS Team Planning and Management of the Project
 
 #### Get Help!
 
-The best place to seek help is on [the IPFS community forum](https://discuss.ipfs.io) or on IRC (freenode) in the #ipfs channel.
+The best place to seek help is on [the IPFS community forum](https://discuss.ipfs.io) or on IRC (freenode) in the `#ipfs` channel.
 
 There are two deprecated repositories containing [FAQ](https://github.com/ipfs/faq) and [support](https://github.com/ipfs/support). Use those as reference, but post any new questions or requests for help on https://discuss.ipfs.io.
 
 #### Documents
 
-- [papers](https://github.com/ipfs/papers) - Academic papers on IPFS.
+- [papers](papers) - Academic papers on IPFS.
 - [specs](https://github.com/ipfs/specs) - Specifications on the IPFS protocol.
 - [notes](https://github.com/ipfs/notes) - Various relevant notes and discussions (that do not fit elsewhere).
 - [reading-list](https://github.com/ipfs/reading-list) - Papers to read to understand IPFS.
 
 #### Discussions
 
-- [apps](https://github.com/ipfs/apps) - Coordinating writing apps on top of ipfs.
 - [archives](https://github.com/ipfs/archives) - Coordinating archival efforts with IPFS.
-
-#### Specification Discussions
-
 - [archive-format](https://github.com/ipfs/archive-format) - A DAG Archive format.
-- [research-bitswap](https://github.com/ipfs/research-bitswap) - Repo to discuss Bitswap research
+- [research-bitswap](https://github.com/ipfs/research-bitswap) - Repo to discuss Bitswap research.
 - [bitswap-ml](https://github.com/ipfs/bitswap-ml) - Bitswap and Machine Learning.
-- [research-crdt](https://github.com/ipfs/research-crdt) - Repo to discuss crdt research
-- [research-pubsub](https://github.com/libp2p/research-pubsub) - Repo to discuss pubsub research
-- [research-p2p-video](https://github.com/libp2p/research-p2p-video) - Repo to discuss pubsub research
+- [research-crdt](https://github.com/ipfs/research-crdt) - Repo to discuss crdt research.
+- [research-pubsub](https://github.com/libp2p/research-pubsub) - Repo to discuss pubsub research.
 - [blockchain-data](https://github.com/ipfs/blockchain-data) - Using IPFS for storing data for Blockchain apps.
 - [POST](https://github.com/ipfs/POST) - A datastructure for human communication.
 
@@ -247,42 +248,31 @@ There are two deprecated repositories containing [FAQ](https://github.com/ipfs/f
 - [js-ipfs](https://github.com/ipfs/js-ipfs) - Implementation in Javascript.
 - [py-ipfs](https://github.com/ipfs/py-ipfs) - Implementation in Python.
 
-#### API Client Implementations
+#### IPFS DSLs
 
-- [http-api-spec](https://github.com/ipfs/http-api-spec) - Apiary IPFS HTTP API description http://docs.ipfs.apiary.io
-- [js-ipfs-api](https://github.com/ipfs/js-ipfs-api) - Implementation in Javascript.
-- [java-ipfs-api](https://github.com/ipfs/java-ipfs-api) - Implementation in Java.
-- [go-ipfs-api](https://github.com/ipfs/go-ipfs-api) - Implementation in Go.
-- [python-ipfs-api](https://github.com/ipfs/python-ipfs-api) - Implementation in Python.
-- [py-ipfs-api](https://github.com/ipfs/py-ipfs-api) - A python client library for the IPFS API
-- [scala-ipfs-api](https://github.com/ipfs/scala-ipfs-api) - Implementation in Scala.
-- [swift-ipfs-api](https://github.com/ipfs/swift-ipfs-api) - Implementation in Swift.
-- [net-ipfs-api](https://github.com/richardschneider/net-ipfs-api) - Implementation in C#.
+- [fsharp-ipfs-dsl](https://github.com/cloveekprojeqt/fsharp-ipfs-dsl) - Embedded declarative F# DSL over [net-ipfs-api](https://github.com/richardschneider/net-ipfs-api)
 
 #### IPFS GUIs
 
-- [station](https://github.com/ipfs/station) - An IPFS Desktop app.
-- [webui](https://github.com/ipfs/webui) - The IPFS WebUI app.
+- [ipfs-companion](https://github.com/ipfs-shipyard/ipfs-companion) - The web browser extension.
+- [ipfs-desktop](https://github.com/ipfs-shipyard/ipfs-desktop) - A menubar/tray desktop app.
+- [ipfs-webui](https://github.com/ipfs/webui) - The IPFS WebUI app.
+- [i18n](https://github.com/ipfs/i18n) - The IPFS Translation Project: crowdsourcing translations of IPFS GUIs and websites.
+- [pm-ipfs-gui](https://github.com/ipfs-shipyard/pm-ipfs-gui) - Coordinating development and maintenance of GUI apps.
 
 #### Apps on IPFS
 
-- [astralboot](https://github.com/ipfs/astralboot) - Low level boot server that deploys directly out of IPFS (TFTP, PXE Boot).
-- [ipfs-web-app](https://github.com/ipfs/ipfs-web-app) - IPFS web app interfaces.
-- [ipget](https://github.com/ipfs/ipget) - wget for IPFS: retrieve files over IPFS and save them locally.
-- [starlog](https://github.com/ipfs/starlog) - Blog posts in IPFS.
-- [container-demos](https://github.com/ipfs/container-demos) - Demos on how to boot docker images and VMs from IPFS.
-- [ipfs-geoip](https://github.com/ipfs/ipfs-geoip) - Geoip over ipfs.
-- [npm on ipfs](https://github.com/diasdavid/npm-on-ipfs) - npm on IPFS.
+You can find an ever growing list at [Awesome IPFS](https://awesome.ipfs.io/categories/apps/)
 
 #### Community Infrastructure
 
-- [blog](https://github.com/ipfs/blog) - The IPFS Blog
+- [blog](https://github.com/ipfs/blog) - The IPFS Blog.
 - [community forum](https://discuss.ipfs.io)
 - [distributions](https://github.com/ipfs/distributions) - Scripts to build the /install html page.
+- [newsletter](https://github.com/ipfs/newsletter) - Prepare and store IPFS Newsletter roundups.
 - [infrastructure](https://github.com/ipfs/infrastructure) - Tools and systems for the community.
-- [newsletter](https://github.com/ipfs/newsletter) - Prepare and store IPFS Newsletter roundups
-- [ops-requests](https://github.com/ipfs/ops-requests) - Requests about infrastructure operations
-- [project-repos](https://github.com/ipfs/project-repos) CI status and other health metrics
+- [ops-requests](https://github.com/ipfs/ops-requests) - Requests about infrastructure operations.
+- [project-repos](https://github.com/ipfs/project-repos) CI status and other health metrics.
 - [website](https://github.com/ipfs/website) - The source to the IPFS community website at http://ipfs.io.
 
 #### Ref Lists
@@ -295,16 +285,11 @@ There are two deprecated repositories containing [FAQ](https://github.com/ipfs/f
 
 - [examples](https://github.com/ipfs/examples) - Examples on how to use go-ipfs.
 - [awesome-ipfs](https://github.com/ipfs/awesome-ipfs) - Useful resources for using IPFS and building things on top of it.
-- [ipfs-readme-standard](https://github.com/RichardLitt/standard-readme) - Standardize all IPFS Readme.md's and other markdown files.
-- [ipld-examples](https://github.com/ipfs/ipld-examples) - Datastructure examples to use with IPLD, the new data format for IPFS.
 - [logo](https://github.com/ipfs/logo) - The logo for IPFS.
-- [translation project](https://www.transifex.com/ipfs/ipfs/) - Crowdsourced translation of IPFS WebUI and the ipfs.io website.
 
 #### IPFS Meetups
 
-- [ipfs/lisbon](https://www.meetup.com/ipfs-lisbon-meetup/) - The IPFS meetup in Lisbon.
-- [ipfs/london](https://www.meetup.com/IPFS-London-Meetup/) - The IPFS meetup in London.
-- More repos coming here. Check [the community discussions](https://github.com/ipfs/community/issues) for other meetups. (There's many now!)
+There are plethora of IPFS Meetups all over the world now. Find yours at the [Community Repo](https://github.com/ipfs/community#events)
 
 We encourage and support IPFS Meetups, please let us know if you would like to start one. Feel free to organize yourself through [the Community discussions](https://github.com/ipfs/community/issues) and [to advertise events in the main repository](https://github.com/ipfs/ipfs/issues).
 
@@ -312,10 +297,10 @@ We encourage and support IPFS Meetups, please let us know if you would like to s
 
 Installing
 
-- [install-go-ipfs](https://github.com/ipfs/install-go-ipfs) - Install go-ipfs shell script.
+- [install-go-ipfs](https://github.com/ipfs/go-ipfs#install) - Install go-ipfs shell script.
 - [install-js-ipfs](https://github.com/ipfs/js-ipfs#install) - Install js-ipfs through npm or a script tag.
 - [ipfs-update](https://github.com/ipfs/ipfs-update) - An updater tool for IPFS.
-- [fs-repo-migrations](https://github.com/ipfs/fs-repo-migrations) - These are migrations for [IPFS fs-repo](https://github.com/ipfs/specs/blob/repo/fs-repo) versions.
+- [fs-repo-migrations](https://github.com/ipfs/fs-repo-migrations) - These are migrations for [IPFS fs-repo](https://github.com/ipfs/specs/tree/399c907b214a24dc82ca010af6884227cb2829cf/repo/fs-repo) versions.
 - [npm-go-ipfs](https://github.com/ipfs/npm-go-ipfs) - Install go-ipfs from npm.
 
 Other
@@ -329,32 +314,7 @@ Other
 - [js-ipfsd-ctl](https://github.com/ipfs/js-ipfsd-ctl) - Control IPFS daemons from JavaScript.
 - [ipfs-hubot](https://github.com/ipfs/ipfs-hubot) - Hubot for IPFS uses.
 - [ipfs-blob-store](https://github.com/ipfs/ipfs-blob-store) - A place to buy blobs.
-
-#### Forks
-
-- [go-datastore (fork)](https://github.com/ipfs/go-datastore) - key-value datastore interfaces
-- [golang-build (fork)](https://github.com/ipfs/golang-build) - Continuous build and release infrastructure
-- [pinbot-irc (fork)](https://github.com/ipfs/pinbot-irc) - a bot for the ipfs irc channel that pins things (among other menial tasks)
-
-#### Implementation Submodules
-
-Many more exist, but we will endeavor to find them and add them here.
-
-- [go-blocks](https://github.com/ipfs/go-blocks) - Deprecated, continued within go-ipfs
-- [go-commands](https://github.com/ipfs/go-commands) - Deprecated, continued within go-ipfs
-- [go-ipfs-util](https://github.com/ipfs/go-ipfs-util) - Common utilities used by go-ipfs and other related go packages.
-- [go-ipld](https://github.com/ipfs/go-ipld) - Implementation of [the IPLD spec](https://github.com/ipfs/specs/tree/master/merkledag/ipld.md) in Go.
-- [go-iprs](https://github.com/ipfs/go-iprs) - Go-ipfs records.
-- [go-libp2p](https://github.com/libp2p/go-libp2p) - libp2p is a networking stack and library modularized out of The IPFS Project, and bundled separately for other tools to use.
-- [go-log](https://github.com/ipfs/go-log) - A logging library used by go-ipfs.
-- [js-ipfs](https://github.com/ipfs/js-ipfs) - IPFS on the Browser.
-- [js-ipfs-bitswap](https://github.com/ipfs/js-ipfs-bitswap) - JavaScript implementation of the Bitswap 'data exchange' protocol used by IPFS
-- [js-ipfs-blocks](https://github.com/ipfs/js-ipfs-block-service) - JavaScript Implementation of Block and BlockService
-- [js-ipfs-data-importing](https://github.com/ipfs/js-ipfs-unixfs-engine) - JavaScript implementation of the layout and chunking mechanisms used by IPFS
-- [js-ipfs-path](https://github.com/ipfs/js-ipfs-path) - Javascript helper functions for IPFS path handling.
-- [js-ipfs-repo](https://github.com/ipfs/js-ipfs-repo) - Implementation of [the IPFS repo spec](https://github.com/ipfs/specs/tree/master/repo) in Javascript.
-- [js-ipfs-unixfs](https://github.com/ipfs/js-ipfs-unixfs) - JavaScript implementation of IPFS' unixfs (a Unix FileSystem representation on top of a MerkleDAG).
-- [js-libp2p](https://github.com/libp2p/js-libp2p) - libp2p implementation in JavaScript.
+- [Find an ever growing list on Awesome IPFS](https://awesome.ipfs.io/categories/tools/)
 
 ## License
 
